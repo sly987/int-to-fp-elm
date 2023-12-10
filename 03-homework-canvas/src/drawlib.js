@@ -56,8 +56,23 @@ export function group(shapes) {
 export function move(dx, dy, shape) {
   switch (shape.kind) {
     // TODO 1
+
+    case "Circle":
+      shape.xCenter+=dx;
+      shape.yCenter+=dy;
+      return shape;
+      
+    case "Square":
+      shape.xCenter+=dx;
+      shape.yCenter+=dy;
+      return shape;
+      
+    case "Group":
+      shape.shapes.forEach(element => move(dx, dy, element));
+
+      return shape;
     default:
-      throw "Unexpected! Some case is missing";
+      throw "Unexpected! Some case is missing 1";
   }
 }
 
@@ -101,7 +116,7 @@ function render(shape, context) {
       shape.shapes.forEach((shape) => render(shape, context));
       break;
     default:
-      throw "Unexpected! Some case is missing";
+      throw "Unexpected! Some case is missing 2";
   }
 }
 
@@ -115,6 +130,12 @@ function render(shape, context) {
 function renderCircle(color, xCenter, yCenter, radius, context) {
   // TODO 2
   // (search for how to draw an "ellipse" in canvas)
+  
+  const path = new Path2D();
+  path.ellipse(xCenter,yCenter, radius, radius, Math.PI/4, 0, 2*Math.PI);
+  path.closePath();
+  context.fillStyle=Color.render(color);
+  context.fill(path);
 }
 
 /**

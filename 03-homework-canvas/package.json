@@ -1,0 +1,16 @@
+{
+  
+  "name": "03-homework-canvas",
+  "version": "1.0.0",
+  "description": "Les navigateurs proposent une librairie de dessin 2D nommée \"canvas\".\r Cette librairie n'est pas forcément évidente à prendre en main et\r repose fortement sur le paradigme impératif (il faut appeler\r spécifiquement les fonctions dans un certain ordre pour dessiner ce qu'on\r veut... Ce qui est une cause de la courbe d'apprentissage et de possibles bugs).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+
+  
+}
