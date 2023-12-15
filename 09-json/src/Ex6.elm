@@ -119,6 +119,14 @@ jsonShapes =
 -- Bonus !
 
 
+{-| Réécrire JD.map en utilisant uniquement JD.andThen et JD.succeed
+(mais sans map bien sûr !)
+-}
+map : (a -> b) -> Decoder a -> Decoder b
+map f decoder =
+    Debug.todo "map"
+
+
 {-| Réécrire JD.map2 en utilisant uniquement JD.andThen et JD.succeed
 (mais sans map2 bien sûr !)
 -}
