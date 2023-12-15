@@ -28,9 +28,9 @@ testAccountKindDecoder =
             JD.decodeString accountKindDecoder json
                 == Ok val
     in
-    { test1 = test "entreprise" Enterprise
-    , test2 = test "individuel" Individual
-    , test3 = test "association" NonProfit
+    { test1 = test "\"entreprise\"" Enterprise
+    , test2 = test "\"individuel\"" Individual
+    , test3 = test "\"association\"" NonProfit
     }
 
 
