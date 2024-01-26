@@ -38,7 +38,8 @@ Prenons plusieurs cas:
   `first` prendra encore la valeur `"salut"` et `other` prendra
   la valeur `["c'est", "cool"]`.
 
-On peut ainsi "destructurer" la liste pour sélectionner les 2, 3, 4 premiers éléments:
+On peut ainsi "destructurer" la liste pour sélectionner les 2, 3, 4, ...
+premiers éléments:
 
 ```elm
 sumFirstTwo : List Int -> Int
@@ -64,7 +65,7 @@ sumFirstTwo ints =
 
 **Un peu d'entraînement**
 
-1. Dans le fichier `Ex01.elm`, en utilisant un pattern matchin,
+1. Dans le fichier `Ex01.elm`, en utilisant un pattern matching,
    écrivez la fonction `firstElement`
    qui.... renvoie le premier élément de la liste passé en paramètre
    (ou `Nothing` si la liste est vide !).
@@ -85,10 +86,10 @@ sumFirstTwo ints =
    "n'importe quel type".
 
    Donc on peut utiliser `List.head` avec une
-   liste de `Int`, de `String` ou de `User`. Ça se comprend bien :
-   on peut prendre le premier élément d'une liste quelque soit son type!
+   liste de `Int`, de `String` ou de `User`.
 
-2. Dans le fichier `Ex02.elm` on chercher à transformer une chaine de la forme `"patate:bidule"`
+2. Dans le fichier `Ex02.elm` on chercher à transformer une chaine de caratères
+   de la forme `"patate:bidule"`
    en une valeur structurée `{key = "patate", value: "bidule"}`.
    Implémenter `toKeyValue` en utilisant `String.split ":"` puis un pattern matching.
 
@@ -98,7 +99,7 @@ sumFirstTwo ints =
 
 Vous l'aurez peut-être remarqué, en Elm, il n'y a pas de boucle
 `for` ou `while`. Pour simuler ces structures de contrôle, on
-utilise la récursivité. Et pour les ça tombe bien car leur
+utilise la récursivité. Et pour les listes ça tombe bien car leur
 structure est récursive !
 
 Je m'explique: pour décrire ce qu'est une liste, de façon synthétique
@@ -158,7 +159,7 @@ d'une liste.
 
 Eh bien non, car à chaque fois que je passe par 2., la longueur de
 la liste diminue donc à un moment je vais tomber sur le cas "coquille
-vide", donc je ne tournerai pas en rond.
+vide", donc je m'arrêterai bien à un moment donné.
 
 Voyons ça en code:
 
