@@ -99,3 +99,5 @@ testListOfListsOfIntsDecoder =
     { test1 = test jsonArrayOfArraysOfInts == Ok [ [ 1, 2, 3 ], [ 42, 6, 9 ], [ 5, 1 ] ]
     , test2 = test "[[]]" == Ok [ [] ]
     }
+
+-- Come back to the README file to read the next parts of the lesson !

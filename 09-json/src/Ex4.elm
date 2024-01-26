@@ -73,3 +73,5 @@ testBoardDecoder =
                 ]
             , games = [ "pong", "tetris" ]
             }
+
+-- Come back to the README file to read the next parts of the lesson !
