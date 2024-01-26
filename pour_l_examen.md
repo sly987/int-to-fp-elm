@@ -36,6 +36,7 @@ vital" pour a minima comprendre les questions de l'examen.
 - "custom type". Par exemple `type Shape = Point | Circle Float`.
   Note: `Shape` est un type, `Point` et `Circle` sont des valeurs.
   `Point` et `Circle` sont appelés les "variants" du type `Shape`.
+- La syntaxe `case ... of`.
 - "The Elm Architecture" avec les fonctions `init`, `update` et `view` et les
   types `Model` et `Msg`.
 - importer des module avec `import`, en les "aliasant" grâce à `as` et/ou
